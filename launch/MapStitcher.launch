@@ -1,0 +1,11 @@
+<launch>
+    <arg name="frequency" value="1.0"/>
+    <arg name="map1_name" value="/jackal1/slam_toolbox/map"/>
+    <arg name="map2_name" value="/jackal3/slam_toolbox/map"/>
+
+    <node pkg="map_stitcher" type="map_stitcher_node" name="map_stitcher_node" output="screen">
+        <param name="frequency" value="$(arg frequency)"/>
+        <param name="map1_name" value="$(arg map1_name)"/>
+        <param name="map2_name" value="$(arg map2_name)"/>
+    </node>
+</launch>
